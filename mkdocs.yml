@@ -2,8 +2,9 @@ site_name: Protyro Cheatsheet
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.section
+    - navigation.tracking
+    - navigation.indexes
     - toc.integrate
     - navigation.top
     - search.suggest
