@@ -37,6 +37,10 @@ If Domain A trusts Domain B, then Domain B can access the ressources of Domain B
 
 ```
 nltest /domain_trusts
+([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
+
+// PowerView
+Get-DomainTrust -API
 ```
 Primary Domain attribute indicates the current domain.
 
