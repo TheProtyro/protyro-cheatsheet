@@ -4,6 +4,22 @@ Find a good domain name with powerful filters : https://www.expireddomains.net/
 
 Test and improve your phishing mail : https://www.mail-tester.com/
 
+#### PowerShell proxy related
+
+```ps1
+// System.Net.WebClient is by default proxy aware
+$wc = new-object system.net.WebClient
+$wc.DownloadString("https://your-url/test.txt")
+
+// Check the proxy
+[System.Net.WebRequest]::DefaultWebProxy.GetProxy("https://your-url/")
+
+// Remove the proxy
+$wc.proxy = $null
+
+// Add a custom user agent
+$wc.Headers.Add('User-Agent',"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0")
+```
 
 #### NAC bypass
 
